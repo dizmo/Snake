@@ -2,7 +2,7 @@ Simple Snake dizmo
 ==================
 
 How the simple snake dizmo is made.  
-![Snake](/readme/snake.png =360x360)
+![Snake](/readme/snake.png)
 
 ## Components
 Snake consists of the following three components. 
@@ -32,7 +32,7 @@ The Field is a two dimensional array (18x18). A '1' indicates a wall and '0' ind
 </code></pre>
     
 The rendered empty field:  
-  ![Snake field](/readme/snake_field.png =180x180)
+  ![Snake field](/readme/snake_field.png)
   
 
 ### Snake
