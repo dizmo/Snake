@@ -2,7 +2,7 @@ Simple Snake dizmo
 ==================
 
 How the simple snake dizmo is made.  
-![Snake](readme/snake.png =360x360)
+![Snake](https://github.com/dizmo/snake/blob/master/readme/snake.png =360x360)
 
 ## Components
 Snake consists of the following three components. 
@@ -32,7 +32,7 @@ The Field is a two dimensional array (18x18). A '1' indicates a wall and '0' ind
 </code></pre>
     
 The rendered empty field:  
-  ![Snake field](readme/snake_field.png =180x180)
+  ![Snake field](https://github.com/dizmo/snake/blob/master/readme/snake_field.png =180x180)
   
 
 ### Snake
@@ -41,7 +41,7 @@ The Snake is also a two dimensional array (*x2) the length is equal to the snake
 </code></pre>
 
 The snake looks like this.  
-  ![Snake](readme/snake_snake.png =180x180)  
+  ![Snake](https://github.com/dizmo/snake/blob/master/readme/snake_snake.png =180x180)  
   
 ### Direction
 To calculate the next snake position the direction is necessary. 
