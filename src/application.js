@@ -1,6 +1,6 @@
 var paper = Raphael(document.getElementById('canvas_container'), 360, 360);
 var GAMESPEED = 160;
-var color = '#E8600C';
+var color = '#a6ce39';
 var snake = [
     [8, 8]
 ];
