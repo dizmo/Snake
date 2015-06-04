@@ -8,7 +8,7 @@ How the simple snake dizmo is made.
 Snake consists of the following three components. 
 
 ### Field
-The Field is a two dimensional array (18x18). A '1' indicates a wall and '0' indicates empty space. The actual field is only 16x16, the advantace to have a bigger array like that is to have the ability to add obstacles. 
+The Field is a two dimensional array (18x18). A '1' indicates a wall and '0' indicates empty space. The actual field is only 16x16, the advantage to have a bigger array like that is to have the ability to add obstacles. 
 <code><pre>field = [
 		[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
         [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -89,4 +89,68 @@ or provided by a docked dizmo. Here a subscription to the property eg. direction
 ## Game 
 The Basis of the game is the gameController
 
+### gameController
+The gameController function turns as long as the variable gameover is not `true`.
+<code><pre>if (gameover === true) {
+        displayGameOver(); 
+        return 0;
+    }</code></pre>
+If `gameover` is `true` the game over display is showed and the game stops otherwise the current Snake head is taken from the array. The head is always the las array element an therefore this can be done by simply `snake.pop();`.  
+Then the futureHeadPosition is calculated according to the direction you selected. 
+To prevent the snake from going backwards an if-condition is added. If your previous direction was `left` the snake is not allowed to go `right` if this is the case the direction is overwritten with the `previousDirection`.
+All four directions are checked inside this switch condition.
+<code><pre>
+    var currentHeadPosition = snake.pop();
+    var futureHeadPosition = [0, 0];
+    switch (snakeDirection) {
+        case 'left':
+            if (previousDirection == 'right') {
+                snake.push(currentHeadPosition);
+                futureHeadPosition = [currentHeadPosition[0], currentHeadPosition[1] + 1];
+                snake.push(futureHeadPosition);
+                break;
+            }
+            previousDirection = 'left';
+            snake.push(currentHeadPosition);
+            futureHeadPosition = [currentHeadPosition[0], currentHeadPosition[1] - 1];
+            snake.push(futureHeadPosition);
+            break;
+            ...
+</code></pre>
+After the futureHeadPosition is determined, it needs to be checked for an obstacle or food. If there is a wall or the snake the game is over. It there is food the tail is not cut. If there is nothing the tail is cut `snake.shift()`.
+<code><pre>    if (field[futureHeadPosition[0]][futureHeadPosition[1]] == 1) {
+        gameover = true;
+    } else if (field[futureHeadPosition[0]][futureHeadPosition[1]] == 2) {
+        foodPosition();
+    } else {
+        var currentTailPosition = snake.shift();
+        field[currentTailPosition[0]][currentTailPosition[1]] = 0;
+    }    
+</code></pre>
+The snake is now drawn into the field and the field is rendered.
+<code><pre>
+    for (var i = snake.length - 1; i >= 0; i--) {
+        field[snake[i][0]][snake[i][1]] = 1;
+    }
+    drawPlayField();
+</code></pre>
+After the `GAMESPEED`as the timeout time the gameController starts again.
+<code><pre>
+    setTimeout(function() {
+        gameController();
+    }, GAMESPEED);</code></pre>
+
+
 ### food Position
+The foodPosition is a recursive function which tries to set the food randomly at a position. If there is already something the function is called again until an empty spot is found. This can take sometime (at least when the snake gets long) and most probably needs to be optimized in the next version. 
+<code><pre>
+function foodPosition() {
+    var x = Math.floor(Math.random() * 16) + 1;
+    var y = Math.floor(Math.random() * 16) + 1;
+    if (field[x][y] > 0) {
+        foodPosition();
+    } else {
+        field[x][y] = 2;
+    }
+}
+</code></pre>
