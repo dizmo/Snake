@@ -197,7 +197,7 @@ function prepeareGame() {
 
 window.document.addEventListener('dizmoready', function() {
     // Your code should be in here so that it is secured that the dizmo is fully loaded
-    dizmo.setSize(360, 360);
+   // dizmo.setSize(360, 360);
     dizmo.canDock(true);
 
     prepeareGame();
