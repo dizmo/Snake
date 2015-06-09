@@ -229,6 +229,14 @@ window.document.addEventListener('dizmoready', function() {
         }
     });
 
+    document.getElementById('arrowBtn').onclick = function() {
+        viewer.installBundle("bundle://assets/dizmos/Arrows_v0.1.dzm", function() {
+            var newBundle = new dizmojs.Bundle('com.dizmo.arrows');
+            newBundle.instantiateDizmo();
+        });
+
+    };
+
     document.getElementById('doneBtn').onclick = function() {
         dizmo.showFront();
     };

@@ -9,13 +9,11 @@ body {
 
 #front {
     width: 100%;
-
     .center {
         margin-left: auto;
         margin-right: auto;
         width: 112px;
         margin-top: 50px;
-
         p {
             font-size: 20px;
             font-weight: bold;
@@ -25,13 +23,22 @@ body {
 }
 
 #back {
+    .arrows-btn-wrapper {
+        position: absolute;
+        bottom: 0px;
+        top: 0px;
+        width: 100%;
+        text-align: center;
+        .arrows-btn {
+            margin-top: 20px;
+        }
+    }
     .done-btn-wrapper {
         position: absolute;
         bottom: 0px;
         left: 0px;
         width: 100%;
         text-align: center;
-
         .done-btn {
             margin-bottom: 20px;
         }
