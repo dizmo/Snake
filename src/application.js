@@ -75,7 +75,11 @@ function drawPlayField() {
 function foodPosition() {
     var x = Math.floor(Math.random() * 16) + 1;
     var y = Math.floor(Math.random() * 16) + 1;
+    var snakePos = snake[snake.length - 1];
+
     if (field[x][y] > 0) {
+        foodPosition();
+    } else if (snakePos[0] == x && snakePos[1] == y) {
         foodPosition();
     } else {
         field[x][y] = 2;
@@ -197,7 +201,7 @@ function prepeareGame() {
 
 window.document.addEventListener('dizmoready', function() {
     // Your code should be in here so that it is secured that the dizmo is fully loaded
-   // dizmo.setSize(360, 360);
+    // dizmo.setSize(360, 360);
     dizmo.canDock(true);
 
     prepeareGame();
