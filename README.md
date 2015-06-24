@@ -66,7 +66,7 @@ document.onkeydown = function(e) {
 };
 ```
 
-It can also be provided by a docked dizmo. Here a subscription to the property eg. direction/left is set. 
+The docked dizmo can write a new value into a corresponding tree node to trigger the callback function you provided with the subscription. For example the docked dizmo writes a new date into 'direction/up’ and the snake will go up.
 
 ```{.javascript}
 dizmo.onDock(function() {
