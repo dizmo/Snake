@@ -1,28 +1,24 @@
-# (Display Name of the dizmo)
+# Snake
 
 **Table of contents**
 
-1. Summary
+1. Screenshots
 2. Description
-3. Examples
-4. Additional Information
+3. Additional information
 
-## Summary
+## Screenshots
 
- (A short summary of the purpose of the dizmo)
- 
+![Snake with keyboard](/help/en/SnakeWithKeyboard.png)
+![Snake settings](/help/en/SnakeBack.png)
+![Control Snake with Arrows](/help/en/SnakeWithArrows.png)
+![Restart Snake](/help/en/SnakeGameOver.png)
+
 ## Description
 
-(A more in depth description of what can be done with the dizmo and how it should be used. This may include images as well)  
-![The dizmo Icon](./Icon.png =32x32)
+Play the classic game Snake with the up, down, left, right arrows on the keyboard. If you are playing on a touch screen, turn Snake to its back, press on the button 'Arrows' and turn Snake to its front with the 'Done' button. Dock the Arrows dizmo to Snake. Now press up, down, left, right on the docked Arrows to control Snake. To restart Snake, press on 'GAME OVER'.
 
-## Examples
+## Additional information
 
-(Some examples explaining how the dizmo could be used)
-
-## Additional Information
-
-* Developer: (Developers Name)
-* Publisher: (Publisher's Name, remove if same as Developer)
-* Contact: (Who to contact for additional information or support)
-* Website: (URL of the dizmo providing additional information)
+Developer: dizmo AG
+Contact: support@dizmo.com
+Website: [www.dizmo.com](/)
