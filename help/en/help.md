@@ -1,12 +1,5 @@
 # Snake
 
-**Table of contents**
-
-1. Screenshots
-2. Description
-3. What is new in V0.1
-4. Additional information
-
 ## Screenshots
 
 ![Snake with keyboard](./SnakeWithKeyboard.png)
