@@ -18,6 +18,6 @@ Play the classic game Snake with the up, down, left, right arrows on the keyboar
 
 ## Additional information
 
-Developer: dizmo AG
-Contact: support@dizmo.com
-Website: [www.dizmo.com](https://www.dizmo.com)
+Developer: dizmo AG<br>
+Contact: support@dizmo.com<br>
+Website: [www.dizmo.com](https://www.dizmo.com)<br>
