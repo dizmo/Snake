@@ -197,7 +197,7 @@ function prepeareGame() {
     paper.rect(120, 140, 120, 80).attr('fill', 'black').attr('stroke-width', 0).click(function() {
         startGame();
     });
-    paper.text(180, 90, "click to\nSTART").attr('fill', 'white').click(function() {
+    paper.text(180, 180, "click to\nSTART").attr('fill', 'white').click(function() {
         startGame();
     });
 }
